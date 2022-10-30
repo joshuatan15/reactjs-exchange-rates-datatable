@@ -1,4 +1,4 @@
-import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import App from "./App";
 import { shallow } from "enzyme";
 import Button from "./shared/Button";
@@ -42,9 +42,11 @@ test("Should able to click export button", async () => {
     });
 
   render(<App />);
-  await new Promise((r) => setTimeout(r, 2000));
+  expect(await screen.findByText("BTC")).toBeInTheDocument();
+
   const exportButton = screen.getByTestId("export");
   fireEvent.click(exportButton);
+  HTMLAnchorElement.prototype.click = jest.fn();
   expect(await screen.findByText("Exporting CSV...")).toBeInTheDocument();
 });
 
@@ -61,10 +63,7 @@ test("checks if returned data from API rendered into component", async () => {
     });
 
   render(<App />);
-
-  await waitFor(() => {
-    expect(screen.getByText("BTC")).toBeInTheDocument();
-  });
+  expect(await screen.findByText("BTC")).toBeInTheDocument();
 });
 
 test("Should render search box", () => {
