@@ -1,0 +1,32 @@
+.button {
+  display: flex;
+  height: 40px;
+  padding: 0;
+  background: #c0c0c0;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:active {
+  background: #7e7f7f;
+}
+
+.button__text,
+.button__icon {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 8px;
+  color: #fff;
+  height: 100%;
+}
+
+.button__icon {
+  font-size: 1.5em;
+  background: rgba(0, 0, 0, 0.1);
+}

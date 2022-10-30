@@ -1,0 +1,28 @@
+.rdt_Table {
+  margin-bottom: 1rem;
+}
+.rdt_TableRow {
+}
+.rdt_TableCol {
+  color: black;
+  font-weight: bolder;
+}
+.rdt_TableCol_Sortable {
+}
+.rdt_TableCell {
+}
+.rdt_TableHeader {
+  background-color: transparent;
+  font-style: italic;
+}
+.rdt_TableFooter {
+}
+.rdt_TableHead {
+}
+.rdt_TableHeadRow {
+  background-color: rgb(182, 182, 182);
+}
+.rdt_TableBody {
+}
+.rdt_ExpanderRow {
+}
